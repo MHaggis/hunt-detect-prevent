@@ -1,0 +1,92 @@
+Reconnaissance
+
+“net” commands
+  index=sysmon Image="*\\net.exe" (CommandLine="*net group*" OR CommandLine="*net localgroup*") | stats count by Computer,CommandLine
+  index=sysmon Image="*\\net.exe" CommandLine="*net user" | stats count by Computer,CommandLine
+  index=sysmon Image="*\\net.exe" CommandLine="*net view" | stats count by Computer,CommandLine
+
+Credential Harvesting
+
+Windows Credential Editor
+  index=sysmon ParentImage="*\\services.exe" | regex CommandLine="\\\\[a-z0-9]{8}-[a-z0-9]{4}-[az0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\.exe-S$"
+
+Mimikatz
+  index=sysmon CommandLine="*privileges::debug*" OR CommandLine="*sekurlsa::*" OR CommandLine="*kerberos::*" OR CommandLine="*crypto::*" OR CommandLine="*lsadump::*" OR CommandLine="*process::*"
+  index=sysmon Hashes="*IMPHASH=3ED0D1F8A6FB0E255E1ED340B1A3EAAB*"
+
+pwdump
+  index=sysmon Hashes="*IMPHASH=B18A1401FF8F444056D29450FBC0A6CE*"
+
+gsecdump
+  index=sysmon Image="*\\g64-*" | regex Image="\\\\g64-[a-z0-9]{3}\.exe$"
+
+
+Lateral Movement
+
+WMI
+  index=sysmon Image="*\\WMIC.exe" CommandLine="*process call create*"
+  index=sysmon ParentImage="*\\WmiPrvSE.exe" | stats count by Computer,CommandLine
+  index=sysmon Image="*\\WMIC.exe" CommandLine="*/NODE:*"
+
+PowerShell
+  index=sysmon Image="*powershell.exe" CommandLine="*Invoke-Command*"
+  index=sysmon ParentImage="*wsmprovhost.exe" | stats count by Computer,CommandLine
+  index=sysmon Image="*powershell.exe" CommandLine="*-EncodedCommand*"
+  index=sysmon Image="*powershell.exe" | stats count by Computer,CommandLine
+
+PsExec
+  index=sysmon ParentImage="*\\PSEXESVC.EXE" | stats count by Image,Hashes
+  index=sysmon Hashes="*IMPHASH=B18A1401FF8F444056D29450FBC0A6CE*"
+  index=sysmon Hashes="*IMPHASH=B18A1401FF8F444056D29450FBC0A6CE*" NOT Image="*PsExec.exe"
+
+Scheduled Tasks
+  index=sysmon ParentImage="*\\taskeng.exe" | stats count by Computer,CommandLine
+  index=sysmon Image="*\\schtasks.exe" CommandLine="*/Create*" CommandLine="*/s *"
+  index=sysmon Image="*\\schtasks.exe" CommandLine="*/Run*" CommandLine="*/s *"
+  index=sysmon Image="*\\schtasks.exe" CommandLine="*/Delete*" CommandLine="*/s *"
+  index=sysmon Image="*\\schtasks.exe" CommandLine="*/Change*" CommandLine="*/s *"
+  index=sysmon ParentImage="*\\at.exe" | stats count by Computer,CommandLine
+
+Data Collection and Compression
+
+WinRAR
+  index=sysmon CommandLine="* -hp*"
+  index=sysmon Hashes="*IMPHASH=4397DAB9E39CC23F35F79B293DDAD780*"
+  index=sysmon Hashes="*IMPHASH=4397DAB9E39CC23F35F79B293DDAD780*" NOT Image="*rar.exe*"
+  index=sysmon CommandLine="* a *"
+
+7-Zip
+  index=sysmon Hashes="*IMPHASH=06CCDA30750899D24EC1383D46A36E65*"
+  index=sysmon Hashes="*IMPHASH=06CCDA30750899D24EC1383D46A36E65*" NOT Image="*7z.exe*"
+  index=sysmon CommandLine="* a *"
+
+Miscellaneous
+
+Stacking Command Line Working Directories
+  index=sysmon ParentImage="*\\cmd.exe" | stats count by CurrentDirectory
+
+Stacking processes that don’t have an executable extension
+  index=sysmon EventCode="1" NOT Image="*.exe" NOT Image="System" NOT Image="&lt;unknown process&gt;" | stats count by Computer,CommandLine
+
+Stacking processes with a single character file name
+  index=sysmon | regex Image="\\\\.\....$" | stats count by Computer,CommandLine
+
+Stacking binary network connections
+  index=sysmon EventCode=3 | iplocation dest_ip | stats count by process,dest_ip,Country Statistical search of processes opening network connections
+  index=sysmon EventCode=3 | streamstats window=1 global=f current=f last(_time) as next_ts by Computer Image DestinationIp | eval tm_to_next=next_ts-_time | stats values(direction) as direction count avg(tm_to_next) as avgTimeToNext stdev(tm_to_next) as stdDevTimeToNext by Computer Image DestinationIp | where stdDevTimeToNext < 1 AND count > 5 AND avgTimeToNext > 0| iplocation DestinationIp | lookup dnslookup clientip as DestinationIp | fields - lat lon | sort stdDevTimeToNext
+
+
+Tom Ueltschi, Swiss Post CERT
+
+stext - keylogger detection
+index=sysmon SourceName="Microsoft-Windows-Sysmon" EventCode="1" stext | search CommandLine="* /stext *"
+
+Ransomware
+index=sysmon SourceName="Microsoft-Windows-Sysmon" EventCode=1 vssadmin.exe | search CommandLine="*vssadmin*" CommandLine="*Delete *" CommandLine="*Shadows*"
+
+alert_sysmon_suspicious_locky_rundll32
+index=sysmon SourceName="Microsoft-Windows-Sysmon" EventCode=1 rundll32.exe
+| search Image="*\\rundll32.exe" (CommandLine="*\\AppData\\Local\\Temp*" CommandLine="*qwerty*")
+OR
+(ParentImage="*\\winword.exe" OR ParentImage="*\\excel.exe" OR
+ParentImage="*\\cscript.exe" OR ParentImage="*\\wscript.exe" OR ParentImage="*\\mshta.exe")

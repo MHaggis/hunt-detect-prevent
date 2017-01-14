@@ -1,0 +1,61 @@
+## This is a sample NXLog configuration file created by Loggly. June 2013
+## See the nxlog reference manual about the configuration options.
+## It should be installed locally and is also available
+## online at http://nxlog.org/nxlog-docs/en/nxlog-reference-manual.html
+
+## Please set the ROOT to the folder your nxlog was installed into,
+## otherwise it will not start.
+#define ROOT C:\\Program Files\\nxlog
+#define ROOT_STRING C:\\Program Files\\nxlog
+define ROOT C:\\Program Files (x86)\\nxlog
+define ROOT_STRING C:\\Program Files (x86)\\nxlog
+
+Moduledir %ROOT%\\modules
+CacheDir %ROOT%\\data
+Pidfile %ROOT%\\data\\nxlog.pid
+SpoolDir %ROOT%\\data
+LogFile %ROOT%\\data\\nxlog.log
+
+# Include fileop while debugging, also enable in the output module below
+#<Extension fileop>
+# Module xm_fileop
+#</Extension>
+
+<Extension json>
+ Module xm_json
+</Extension>
+
+<Extension syslog>
+ Module xm_syslog
+</Extension>
+
+<Input internal>
+ Module im_internal
+ Exec $Message = to_json();
+</Input>
+
+# Windows Event Log
+<Input eventlog>
+# Uncomment im_msvistalog for Windows Vista/2008 and later
+ Module im_msvistalog
+
+#Uncomment im_mseventlog for Windows XP/2000/2003
+#Module im_mseventlog
+
+ Exec $Message = to_json();
+</Input>
+
+<Output out>
+ Module om_udp
+ Host 192.168.1.186
+ Port 514
+
+ Exec to_syslog_ietf();
+
+#Use the following line for debugging (uncomment the fileop extension above as well)
+#Exec file_write("C:\\Program Files (x86)\\nxlog\\data\\nxlog_output.log", $raw_event);
+</Output>
+
+<Route 66>
+  Path        in => out
+</Route>

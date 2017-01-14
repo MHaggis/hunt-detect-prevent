@@ -1,0 +1,39 @@
+define ROOT C:\Program Files (x86)\nxlog
+
+Moduledir %ROOT%\modules
+CacheDir %ROOT%\data
+Pidfile %ROOT%\data\nxlog.pid
+SpoolDir %ROOT%\data
+LogFile %ROOT%\data\nxlog.log
+LogLevel INFO
+
+<Extension _json>
+    Module xm_json
+</Extension>
+
+<Extension _syslog>
+    Module xm_syslog
+</Extension>
+
+<Input in>
+    Module im_msvistalog
+    Query <QueryList> \
+           <Query Id="0"> \
+            <Select Path="Microsoft-Windows-Sysmon/Operational">*</Select> \
+            <Select Path="Application">*</Select> \
+            <Select Path="System">*</Select> \
+            <Select Path="Security">*</Select> \
+           </Query> \
+          </QueryList>
+</Input>
+
+<Output out>
+    Module      om_udp
+    Host        192.168.1.186
+    Port        514
+    Exec        to_json(); $Message = $raw_event; to_syslog_bsd();
+</Output>
+
+<Route 66>
+  Path        in => out
+</Route>

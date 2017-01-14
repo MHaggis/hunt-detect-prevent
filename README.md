@@ -28,6 +28,7 @@ http://blog.netwrix.com/2016/04/11/ransomware-protection-using-fsrm-and-powershe
 https://github.com/ThreatHuntingProject/ThreatHunting
 
 **Powershell**
+
 https://www.symantec.com/content/dam/symantec/docs/security-center/white-papers/increased-use-of-powershell-in-attacks-16-en.pdf
 
 https://isc.sans.edu/diary/21829

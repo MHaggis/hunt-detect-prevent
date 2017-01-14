@@ -1,4 +1,9 @@
-#Microsoft Windows File Screening
+# Microsoft Windows File Screening
+
+## Resources
+http://olivermarshall.net/using-file-screening-to-help-block-cryptolocker/
+
+http://blog.netwrix.com/2016/04/11/ransomware-protection-using-fsrm-and-powershell/
 
 
 **Server 2012**

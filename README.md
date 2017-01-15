@@ -75,6 +75,8 @@ https://github.com/PowerShellMafia/PowerSCCM
 
 **Recommendations reading:**
 
+https://github.com/subTee
+
 https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/
 
 

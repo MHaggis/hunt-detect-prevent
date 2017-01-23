@@ -29,6 +29,10 @@ https://github.com/ThreatHuntingProject/ThreatHunting
 
 **Powershell**
 
+Log hunting with powershell
+
+http://909research.com/windows-log-hunting-with-powershell/
+
 https://www.symantec.com/content/dam/symantec/docs/security-center/white-papers/increased-use-of-powershell-in-attacks-16-en.pdf
 
 https://isc.sans.edu/diary/21829

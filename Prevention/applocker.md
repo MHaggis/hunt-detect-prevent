@@ -3,6 +3,7 @@
 ##Resources
 
 http://www.howtogeek.com/howto/6317/block-users-from-using-certain-applications-with-applocker/
+https://github.com/iadgov/AppLocker-Guidance
 
 **What to block**
 

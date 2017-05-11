@@ -49,6 +49,8 @@ https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
 
 **Windows event forwarding**
 
+https://blogs.technet.microsoft.com/russellt/2017/05/09/project-sauron-introduction/
+
 https://blogs.technet.microsoft.com/jepayne/2015/11/23/monitoring-what-matters-windows-event-forwarding-for-everyone-even-if-you-already-have-a-siem/
 
 http://909research.com/sysmon-the-best-free-windows-monitoring-tool-you-arent-using/

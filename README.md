@@ -1,4 +1,5 @@
 # hunt-detect-prevent
+
 Lists of sources and utilities to hunt, detect and prevent evildoers.
 
 
@@ -7,6 +8,7 @@ Lists of sources and utilities to hunt, detect and prevent evildoers.
 **AD Security**
 
 https://jimshaver.net/2016/02/14/defending-against-mimikatz/
+
 https://adsecurity.org/?p=559
 
 **Microsoft EMET**
@@ -43,7 +45,6 @@ POSH to read event logs
 
 https://files.sans.org/summit/DFIR_Summit_Prague_2016/PDFs/PowerShell-obFUsk8tion-Techniques-David-Bohannon.pdf
 
-
 https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html
 
 
@@ -59,8 +60,11 @@ https://blogs.technet.microsoft.com/wincat/2008/08/11/quick-and-dirty-large-scal
 
 
 **EDR**
+
 CarbonBlack
+
 limacharlie
+
 OSQuery
 
 **Logging**
@@ -70,13 +74,17 @@ Logging debrief--
 https://www.malwarearchaeology.com/logging/
 
 [ELK](https://www.elastic.co/products)
+
 [Graylog](https://www.graylog.org/)
+
 [Splunk](https://www.splunk.com/)
+
 [alienvault](https://www.alienvault.com/)
 
-
 **SCCM**
+
 https://www.fireeye.com/blog/threat-research/2016/12/do_you_see_what_icc.html
+
 https://github.com/PowerShellMafia/PowerSCCM
 
 **Recommendations reading:**
@@ -84,6 +92,5 @@ https://github.com/PowerShellMafia/PowerSCCM
 https://github.com/subTee
 
 https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/
-
 
 http://seclist.us/powermemory-v1-4-exploit-the-credentials-present-in-files-and-memory.html

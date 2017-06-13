@@ -87,7 +87,7 @@ https://www.fireeye.com/blog/threat-research/2016/12/do_you_see_what_icc.html
 
 https://github.com/PowerShellMafia/PowerSCCM
 
-**Recommendations reading:**
+**Recommended reading:**
 
 https://github.com/subTee
 

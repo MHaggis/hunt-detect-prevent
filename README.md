@@ -41,7 +41,7 @@ https://isc.sans.edu/diary/21829
 - powershell blocked via windows firewall (same for cscript/wscript)
 
 POSH to read event logs
-- http://tinyurl.com/504-extra
+- http://www.tinyurl.com/504extra2
 
 https://files.sans.org/summit/DFIR_Summit_Prague_2016/PDFs/PowerShell-obFUsk8tion-Techniques-David-Bohannon.pdf
 

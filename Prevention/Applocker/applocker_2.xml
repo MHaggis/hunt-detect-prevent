@@ -1,0 +1,323 @@
+<AppLockerPolicy Version="1">
+  <RuleCollection Type="Appx" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Dll" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Exe" EnforcementMode="AuditOnly" />
+  <RuleCollection Type="Msi" EnforcementMode="NotConfigured" />
+  <RuleCollection Type="Script" EnforcementMode="NotConfigured">
+    <FilePathRule Id="02cc3f4e-9ecb-4962-a7a0-830e889da641" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="06dce67b-934c-454f-a263-2515c8796a5d" Name="(Default Rule) All scripts located in the Program Files folder" Description="Allows members of the Everyone group to run scripts that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%PROGRAMFILES%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="071de44f-4ad0-4a8d-8b96-e83dbae2ea4b" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="0dcf306f-3bab-4c90-90d9-fbfd9c2bdf6d" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.jse" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.jse" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="15dcb730-956c-4b60-8923-de96a44eb89f" Name="%OSDRIVE%\programdata\*.chm" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.chm" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="188f936c-dd3f-4386-81f0-95bb81796d0c" Name="%OSDRIVE%\programdata\*.vbe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.vbe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="1cf303c6-633b-4519-a267-d9e7586ab8e0" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.jar" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.jar" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="20984dc8-c9d6-4c6f-9d76-36fd6264d5ff" Name="%OSDRIVE%\Users\*\Appdata\local\*.hta" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.hta" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="21c695b7-2314-49bb-a3fc-2614eb4f234e" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.bat" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.bat" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="23a8ee9b-eb29-4d88-8791-99c34ad0fffe" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.wsf" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.wsf" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="29fc69d8-d13f-4aa0-833f-8d010dccf623" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.jar" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.jar" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="2aa74338-e385-44a5-a525-cc5e0c6f947a" Name="%OSDRIVE%\programdata\*.hta" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.hta" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="34738863-06fb-45c1-9a36-7fefe0a2b058" Name="%OSDRIVE%\Users\*\Appdata\local\*.jse" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.jse" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="3c3cb59c-7161-4009-a097-c1d15f9a3242" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.lnk" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.lnk" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="3c4635df-57d1-46bb-9a41-086eb9218b4b" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.scr" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.scr" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="42b6586e-b250-4c98-abe0-7e918c144270" Name="%OSDRIVE%\Users\*\Appdata\local\*.scr" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.scr" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="442a52fd-5fdf-4c2c-af5d-edd2455d854d" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.hta" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.hta" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="4528455a-a1f8-43ec-a106-64ec4ae98cd8" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.chm" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.chm" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="4ed32ffc-26e2-4351-b4b5-05688e7331d9" Name="%OSDRIVE%\programdata\*.lnk" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.lnk" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="55f87d8b-f26c-4840-8e53-d28c4ca397be" Name="%OSDRIVE%\programdata\*.wsf" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.wsf" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="5f562722-d3c3-4e1d-ab66-24f62ff6f5a6" Name="%OSDRIVE%\programdata\*.bat" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.bat" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="60aab6db-7af8-44fd-b6ea-b65575d62e3c" Name="%OSDRIVE%\Users\*\Appdata\local\*.bat" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.bat" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="614e405c-10b2-4d53-a92f-ef2d387c5e4d" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="69067f65-6766-498e-bd66-0a20d9206ac0" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.lnk" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.lnk" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="6ae871b2-0874-452f-92d8-0e039df5ea16" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.hta" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.hta" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="6d06c572-9008-4c53-97cd-51ea2d732fe2" Name="%OSDRIVE%\programdata\*.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="754f07d8-16aa-437c-abe1-45f257ef82d6" Name="%OSDRIVE%\programdata\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="778768f8-dcc7-4348-89de-ec3bbf190b84" Name="%OSDRIVE%\programdata\*.jar" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.jar" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="7a05fde3-2258-47f8-8df8-09880e218330" Name="%OSDRIVE%\Users\*\Appdata\local\*.lnk" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.lnk" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="9428c672-5fc3-47f4-808a-a0011f36dd2c" Name="(Default Rule) All scripts located in the Windows folder" Description="Allows members of the Everyone group to run scripts that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="964b33db-4e1e-4a0f-a71d-c01556934e96" Name="%OSDRIVE%\Users\*\Appdata\local\*.vbe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.vbe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="a268616d-9d62-462f-95e1-12facae0f268" Name="%OSDRIVE%\Users\*\Appdata\local\*.chm" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.chm" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="b4bb2468-052a-4746-ad15-7736db7c0126" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.wsf" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.wsf" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="b9e38e1e-195c-4d24-90e4-1eebf413dece" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.bat" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.bat" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c182032e-a46d-432c-8c1f-4aef7895fe28" Name="%OSDRIVE%\Users\*\Appdata\local\*.jar" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.jar" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c4fded39-d900-4cb8-91ad-5fc3d17bd2d0" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.vb" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.vb" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c51e0e91-fac5-41ca-a87e-ef5ec8d7551e" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.vbe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.vbe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c54d4c46-3e34-4e6a-a48c-4fcedee6f872" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.vbe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.vbe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c74abbd4-9a2f-479a-84ee-e9f2928810c1" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.jse" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.jse" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c9cd9a71-df9f-4edf-bfe2-c2d31309383a" Name="%OSDRIVE%\programdata\*.scr" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.scr" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="cf3ae6cd-3a98-4803-9107-edd4c5c6d9ef" Name="%OSDRIVE%\Users\*\Appdata\local\*.vb" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.vb" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="d42673dc-86be-4a41-a7b3-8b0576231513" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="d9510042-8210-426e-8507-552b1d5b5830" Name="%OSDRIVE%\programdata\*.jse" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.jse" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="da4ee1d1-b5f3-4a65-b029-fdc6d9cfe480" Name="%OSDRIVE%\programdata\*.vb" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\programdata\*.vb" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="dd59654e-e845-4039-8064-42b4789e6731" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.chm" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.chm" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="ddc595a4-4c93-4ade-b815-59ddf40b184f" Name="%OSDRIVE%\Users\*\Appdata\local\*.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="de5f353e-5e34-4751-a970-2a9fb356437c" Name="%OSDRIVE%\Users\*\Appdata\local\temp\*.vb" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\temp\*.vb" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="e5f7c5f5-fbbf-4c71-8a6a-6a985d70facf" Name="%OSDRIVE%\Users\*\Appdata\local\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="ece24d16-3e63-4ca5-9a27-44c89c6ae079" Name="%OSDRIVE%\Users\*\Appdata\roaming\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\roaming\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="ed97d0cb-15ff-430f-b82c-8d7832957725" Name="(Default Rule) All scripts" Description="Allows members of the local Administrators group to run all scripts." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="ee2f8d0e-7a92-4a19-b0cc-f98ea523ce12" Name="%OSDRIVE%\Users\*\Appdata\local\*.wsf" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\local\*.wsf" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="e5d0220b-383a-46b5-a93b-2a3f104ff9fc" Name="%OSDRIVE%\Users\*\Appdata\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="d993ae2e-a11b-4f64-a02e-8d5dcd79a502" Name="%OSDRIVE%\Users\*\Appdata\*.jse" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.jse" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="c6363e83-2256-4a12-9183-e4d0d77d6bbc" Name="%OSDRIVE%\Users\*\Appdata\*.wsf" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.wsf" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="af166d76-9fe2-4f2f-91aa-103260bac01b" Name="%OSDRIVE%\Users\*\Appdata\*.vbs" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.vbs" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="4f0bb405-fb51-46ac-ae81-111e6ebef39d" Name="%OSDRIVE%\Users\*\Appdata\*.vbe" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.vbe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="6c4afe66-cc9b-4795-9b2e-141473dd0616" Name="%OSDRIVE%\Users\*\Appdata\*.vb" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.vb" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="3d5331a0-a0ed-4b11-b6c8-b0c33b2400ae" Name="%OSDRIVE%\Users\*\Appdata\*.chm" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.chm" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="007fba76-c11b-4f5b-ae09-4797e67c81ea" Name="%OSDRIVE%\Users\*\Appdata\*.hta" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.hta" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="975c7bfa-2048-468d-a0af-890a81b4d5a6" Name="%OSDRIVE%\Users\*\Appdata\*.jar" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.jar" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="08e3f167-616f-483d-bab2-fbb9f7d856c3" Name="%OSDRIVE%\Users\*\Appdata\*.lnk" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.lnk" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="d127b166-44c8-4810-b4a4-0f7baffd2600" Name="%OSDRIVE%\Users\*\Appdata\*.js" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.js" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="cb60e2ab-aa69-41f9-8d31-169c3df7a910" Name="%OSDRIVE%\Users\*\Appdata\*.scr" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\*\Appdata\*.scr" />
+      </Conditions>
+    </FilePathRule>
+  </RuleCollection>
+</AppLockerPolicy>
